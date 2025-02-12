@@ -13,6 +13,7 @@ TagManager:
   - Door3
   - Door4
   - Win
+  - Torch
   layers:
   - Default
   - TransparentFX

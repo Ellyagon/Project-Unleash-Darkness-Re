@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class CrystalsManager : MonoBehaviour
+public class RandomPiecesSpawner : MonoBehaviour
 {
     [Tooltip("Arrastra aquí los 8 objetos que actuarán como cristales.")]
     public GameObject[] cristales;  // Debes asignar 8 elementos en el Inspector.
