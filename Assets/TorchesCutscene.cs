@@ -42,6 +42,7 @@ public class TorchesCutscene : MonoBehaviour
         foreach (var torch in torches)
         {
             torch.EnableTorch(true);
+            audioSource.PlayOneShot(audioSource.clip);
             yield return new WaitForSeconds(0.5f);
         }
         yield return new WaitForSeconds(0.5f);
@@ -49,7 +50,6 @@ public class TorchesCutscene : MonoBehaviour
         {
             torch.EnableTorch(false);
             torch.SetInteractable(true);
-            audioSource.PlayOneShot(audioSource.clip);
             yield return new WaitForSeconds(0.5f);
         }
         yield return new WaitForSeconds(3);

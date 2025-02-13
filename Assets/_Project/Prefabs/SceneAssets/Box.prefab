@@ -95,6 +95,31 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 160.94922
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 160.94922
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 160.94922
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: e7a6475ef7083f44d90829c0367834f3,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -123,8 +148,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: e7a6475ef7083f44d90829c0367834f3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5055731311067301517}
   m_SourcePrefab: {fileID: 100100000, guid: e7a6475ef7083f44d90829c0367834f3, type: 3}
+--- !u!1 &2336021472446967909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5148817236446094103, guid: e7a6475ef7083f44d90829c0367834f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7430784183081227122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5055731311067301517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336021472446967909}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.006938969, y: 0.00693897, z: 0.0068029203}
+  m_Center: {x: 9.524667e-17, y: -0.0000000039079158, z: 0.0015319708}
 --- !u!4 &6959692710002865305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7a6475ef7083f44d90829c0367834f3,

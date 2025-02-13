@@ -28,8 +28,6 @@ public class EnemyActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-      
         if (_Handler._lanternOn) 
         {
             lightTime += Time.deltaTime;
@@ -49,7 +47,8 @@ public class EnemyActivate : MonoBehaviour
         {
             monster.SetActive(true);
             EnemyOn = true;
-            audioSource.PlayOneShot(EnemySound);
+            audioSource.Play();
+            audioSource.PlayOneShot(EnemyMusic, 0.5f);
          
             isEnemySoundPlaying = true;
 

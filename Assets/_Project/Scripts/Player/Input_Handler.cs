@@ -33,11 +33,10 @@ public class Input_Handler : MonoBehaviour
 
 
     void Update()
-
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        _onMove?.Invoke(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        _onMove?.Invoke(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
         if (Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0)
         {
             animator.SetTrigger("Run");
@@ -55,7 +54,7 @@ public class Input_Handler : MonoBehaviour
             _lanternOn = true;
             audioSource.PlayOneShot(LightSoundOn);
             _lantern.SetActive(true);
-            Instantiate(_lanternParticle, lanternPartSpawn.position, lanternPartSpawn.rotation);
+            Instantiate(_lanternParticle, lanternPartSpawn);
 
         }
         else if (Input.GetKeyDown("e") && (_lanternOn == true))
