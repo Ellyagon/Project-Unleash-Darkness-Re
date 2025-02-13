@@ -247,6 +247,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6832078475674952284, guid: 0ea49c133f3c3fe41889b0cde6369f9c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832078475674952284, guid: 0ea49c133f3c3fe41889b0cde6369f9c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28409594
+      objectReference: {fileID: 0}
     - target: {fileID: 6967046549248180453, guid: 0ea49c133f3c3fe41889b0cde6369f9c,
         type: 3}
       propertyPath: m_Layer
@@ -4003,7 +4013,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 24.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6676,7 +6686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   sentences:
-  - "TARO:\nHello? (Heavy breathing) Nori? I\u2026I can not see you "
+  - "TARO:\nHello? umm Nori? I\u2026I can not see you "
   - 'NORI:
 
     Taro, is really you!!
@@ -6692,10 +6702,8 @@ MonoBehaviour:
 '
   - 'NORI:
 
-    The Enthors...
-
-    Lets go. Press E to use my light, that will be
-    of help.'
+    The Enthors... they are why I appear like this. Hurry! Press E to
+    use my light'
 --- !u!114 &556446852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10467,7 +10475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877755743}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37437066, y: 0.00000002256394, z: -0.000000009109746, w: 0.9272792}
+  m_LocalRotation: {x: 0.37437066, y: 0.00000002256394, z: -0.000000009109745, w: 0.9272792}
   m_LocalPosition: {x: -1.6200004, y: 8.190932, z: -29.536577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10538,7 +10546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878870891}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37437066, y: 0.00000002256394, z: -0.000000009109746, w: 0.9272792}
+  m_LocalRotation: {x: 0.37437066, y: 0.00000002256394, z: -0.000000009109745, w: 0.9272792}
   m_LocalPosition: {x: -1.6200004, y: 8.190932, z: -29.536577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17340,7 +17348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fosil
   sentences:
-  - 'emi aqui pon tu parte de la presentacion '
+  - "So you\u2019re finally here huh? \r\n"
 --- !u!114 &1308246326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24619,7 +24627,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 24.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -27290,7 +27298,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 20.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
