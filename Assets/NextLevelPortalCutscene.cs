@@ -51,7 +51,7 @@ public class NextLevelPortalCutscene : Cutscene
         door.SetActive(true);
         yield return new WaitForSeconds(1);
         virtualCamera.Priority = 0;
-
+        yield return new WaitForSeconds(cameraWait);
         CutsceneEvent(false);
     }
 }
