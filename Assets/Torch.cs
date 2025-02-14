@@ -11,6 +11,7 @@ public class Torch : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip torchOn;
     [SerializeField] private AudioClip torchOff;
+    [SerializeField] private GameObject billboard;
     private TorchManager torchManager;
     private bool triggered;
 
@@ -24,7 +25,7 @@ public class Torch : MonoBehaviour
     private void Update()
     {
         if (!triggered) return;
-        if (!Input.GetMouseButtonDown(0)) return;
+        if (!Input.GetKeyDown(KeyCode.F)) return;
 
         LightTorch();
     }
@@ -64,17 +65,20 @@ public class Torch : MonoBehaviour
         torchManager.CountTorch();
         SetInteractable(false);
         triggered = false;
+        billboard.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
         triggered = true;
+        billboard.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
         triggered = false;
+        billboard.SetActive(false);
     }
 }

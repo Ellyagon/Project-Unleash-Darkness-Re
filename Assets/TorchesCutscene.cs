@@ -52,8 +52,8 @@ public class TorchesCutscene : Cutscene
             yield return new WaitForSeconds(0.5f);
         }
         yield return new WaitForSeconds(3);
-
         virtualCamera.Priority = 0;
+        yield return new WaitForSeconds(cameraWait);
         CutsceneEvent(false);
     }
 }

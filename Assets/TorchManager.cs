@@ -20,7 +20,6 @@ public class TorchManager : MonoBehaviour
     public void CountTorch()
     {
         lightedTorches++;
-        print(totalTorches + " " + lightedTorches);
         if (lightedTorches == totalTorches)
             OnAllTorchesFired?.Invoke();
     }

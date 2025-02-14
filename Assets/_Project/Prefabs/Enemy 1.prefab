@@ -203,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   yep: {fileID: 40151301177477021}
+  animator: {fileID: 0}
 --- !u!114 &40151301177477021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,6 @@ MonoBehaviour:
   _Handler: {fileID: 0}
   EnemyOn: 0
   EnemySound: {fileID: 8300000, guid: 6a6769fec2308634eaa042a8411d51a7, type: 3}
-  EnemyMusic: {fileID: 8300000, guid: 88d3e8db8c1291c4e8ec823c8eadaf1c, type: 3}
 --- !u!82 &1213498244538784866
 AudioSource:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class EnemyActivate : MonoBehaviour
     private bool monsterActivated = false;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         monster.SetActive(false);   
@@ -44,13 +44,10 @@ public class EnemyActivate : MonoBehaviour
 
     public void Monster()
     {
-        if (lightTime >= 11 && !isEnemySoundPlaying ) 
+        if (lightTime >= 11 && !isEnemySoundPlaying )
         {
-            monster.SetActive(true);
-            EnemyOn = true;
-            audioSource.Play();
-            monsterActivated = true;
-            isEnemySoundPlaying = true;
+            SetActiveMonster();
+            ActivateMonster();
 
         } else if (lightTime <= 10)
         {
@@ -58,5 +55,18 @@ public class EnemyActivate : MonoBehaviour
             EnemyOn = false;
             isEnemySoundPlaying = false;
         }
+    }
+
+    public void ActivateMonster()
+    {
+        EnemyOn = true;
+        audioSource.Play();
+        monsterActivated = true;
+        isEnemySoundPlaying = true;
+    }
+
+    public void SetActiveMonster()
+    {
+        monster.SetActive(true);
     }
 }
