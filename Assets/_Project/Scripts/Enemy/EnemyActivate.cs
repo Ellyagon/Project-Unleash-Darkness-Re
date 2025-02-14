@@ -12,9 +12,9 @@ public class EnemyActivate : MonoBehaviour
     public bool EnemyOn = false;
 
     public AudioClip EnemySound;
-    public AudioClip EnemyMusic;
     private AudioSource audioSource;
     private bool isEnemySoundPlaying = false;
+    private bool monsterActivated = false;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,7 @@ public class EnemyActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (monsterActivated) return;
         if (_Handler._lanternOn) 
         {
             lightTime += Time.deltaTime;
@@ -48,8 +49,7 @@ public class EnemyActivate : MonoBehaviour
             monster.SetActive(true);
             EnemyOn = true;
             audioSource.Play();
-            audioSource.PlayOneShot(EnemyMusic, 0.5f);
-         
+            monsterActivated = true;
             isEnemySoundPlaying = true;
 
         } else if (lightTime <= 10)

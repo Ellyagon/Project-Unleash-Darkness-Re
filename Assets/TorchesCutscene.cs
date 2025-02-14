@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorchesCutscene : MonoBehaviour
+public class TorchesCutscene : Cutscene
 {
     private Torch[] torches;
     private CinemachineVirtualCamera virtualCamera;
-    private AudioSource audioSource;
 
     void OnEnable()
     {
@@ -17,7 +16,6 @@ public class TorchesCutscene : MonoBehaviour
         for (int i = 0; i < torchObjects.Length; i++) 
             torches[i] = torchObjects[i].GetComponent<Torch>();
         PiecesManager.OnAllPiecesPlaced += StartTorchesCutscene;
-        audioSource = GetComponentInChildren<AudioSource>();
     }
 
     void OnDisable()
@@ -34,6 +32,8 @@ public class TorchesCutscene : MonoBehaviour
 
     private IEnumerator CutsceneRoutine()
     {
+        CutsceneEvent(true);
+
         yield return new WaitForSeconds(1);
         virtualCamera.Priority = 11;
         float cameraWait = Camera.main.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time;
@@ -42,10 +42,9 @@ public class TorchesCutscene : MonoBehaviour
         foreach (var torch in torches)
         {
             torch.EnableTorch(true);
-            audioSource.PlayOneShot(audioSource.clip);
             yield return new WaitForSeconds(0.5f);
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         foreach (var torch in torches)
         {
             torch.EnableTorch(false);
@@ -55,5 +54,6 @@ public class TorchesCutscene : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         virtualCamera.Priority = 0;
+        CutsceneEvent(false);
     }
 }

@@ -18,13 +18,37 @@ public class Move : MonoBehaviour
         input = Vector2.zero;
     }
 
+    private void OnEnable()
+    {
+        Cutscene.OnCutscene += SetOnCutscene;
+    }
+
+    private void OnDisable()
+    {
+        Cutscene.OnCutscene -= SetOnCutscene;
+    }
+
+    bool onCutscene = false;
+    private void SetOnCutscene(bool isPlaying)
+    {
+        onCutscene = isPlaying;
+    }
+
     private void LateUpdate()
     {
+        if (onCutscene) return;
+
         RotatePlayerSmooth();
     }
 
     private void FixedUpdate()
     {
+        if (onCutscene)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
+
         Vector3 velocity = new(input.x, rb.velocity.y, input.y);
         rb.velocity = velocity;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class TorchManager : MonoBehaviour
 {
     [SerializeField] private int totalTorches = 0;
     [SerializeField] private int lightedTorches;
+    public static event Action OnAllTorchesFired;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,8 @@ public class TorchManager : MonoBehaviour
     public void CountTorch()
     {
         lightedTorches++;
+        print(totalTorches + " " + lightedTorches);
         if (lightedTorches == totalTorches)
-            print("Level 2 passed");
+            OnAllTorchesFired?.Invoke();
     }
 }

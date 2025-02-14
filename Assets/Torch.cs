@@ -8,12 +8,16 @@ public class Torch : MonoBehaviour
     [SerializeField] private Light light1;
     [SerializeField] private Light light2;
     [SerializeField] private ParticleSystem particle;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip torchOn;
+    [SerializeField] private AudioClip torchOff;
     private TorchManager torchManager;
     private bool triggered;
 
     private void Start()
     {
         torchManager = transform.parent.gameObject.GetComponent<TorchManager>();
+        audioSource = GetComponentInChildren<AudioSource>();
         SetInteractable(interactable);
     }
 
@@ -28,12 +32,18 @@ public class Torch : MonoBehaviour
     public void EnableTorch(bool enable)
     {
         light1.enabled = enable; light2.enabled = enable;
-        if (enable) particle.Play();
+        if (enable)
+        {
+            audioSource.PlayOneShot(torchOn);
+            particle.Play();
+        }
         else
         {
+            audioSource.PlayOneShot(torchOff);
             particle.Stop();
             Invoke(nameof(ClearParticles), 3);
         }
+
     }
 
     private void ClearParticles()
@@ -52,6 +62,8 @@ public class Torch : MonoBehaviour
     {
         EnableTorch(true);
         torchManager.CountTorch();
+        SetInteractable(false);
+        triggered = false;
     }
 
     private void OnTriggerEnter(Collider other)

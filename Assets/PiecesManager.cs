@@ -9,19 +9,22 @@ public class PiecesManager : MonoBehaviour
     [SerializeField] private int totalPieces = 3;
     private List<Piece> collectedPieces = new();
     private int placedPieces = 0;
+    private AudioSource audioSource;
     public static event Action OnAllPiecesPlaced;
     public static event Action<int, string> OnPiecesNumberChanged;
-
+    
     public int CollectedPieces { get { return collectedPieces.Count; } }
     public int TotalPieces { get { return totalPieces; } }
 
     private void Start()
     {
         OnPiecesNumberChanged?.Invoke(collectedPieces.Count, " pieces");
+        audioSource = GetComponent<AudioSource>();
     }
     public void CollectPiece(Piece piece)
     {
         collectedPieces.Add(piece);
+        audioSource.PlayOneShot(audioSource.clip, 0.5f);
     }
 
     public void PlacePiece()
