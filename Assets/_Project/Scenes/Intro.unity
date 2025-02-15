@@ -4013,7 +4013,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10475,8 +10475,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877755743}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.333404, y: 0.000000016221902, z: -0.0000000057366774, w: 0.94278413}
-  m_LocalPosition: {x: -1.6200004, y: 5.1309323, z: -8.02}
+  m_LocalRotation: {x: 0.3334041, y: 0.000000018515486, z: -0.000000006547777, w: 0.942784}
+  m_LocalPosition: {x: -1.49, y: 5.1309323, z: -24.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13955,8 +13955,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065405962}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.333404, y: 0.000000016221902, z: -0.0000000057366774, w: 0.94278413}
-  m_LocalPosition: {x: -1.6200004, y: 5.1309323, z: -8.02}
+  m_LocalRotation: {x: 0.3334041, y: 0.000000018515486, z: -0.000000006547777, w: 0.942784}
+  m_LocalPosition: {x: -1.49, y: 5.1309323, z: -24.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20524,8 +20524,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0728e342f5fdf364a87c71a9f828fd82, type: 3}
-  m_Resource: {fileID: 8300000, guid: 0728e342f5fdf364a87c71a9f828fd82, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7379eb5181e044946957d5271606d2b9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7379eb5181e044946957d5271606d2b9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -22060,7 +22060,7 @@ PrefabInstance:
     - target: {fileID: 579894346262507276, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6200004
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 579894346262507276, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
         type: 3}
@@ -22070,7 +22070,7 @@ PrefabInstance:
     - target: {fileID: 579894346262507276, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.48
+      value: -20.37
       objectReference: {fileID: 0}
     - target: {fileID: 579894346262507276, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
         type: 3}
@@ -22112,6 +22112,16 @@ PrefabInstance:
       propertyPath: _limitBottom
       value: 
       objectReference: {fileID: 1190788849}
+    - target: {fileID: 1466461451403776942, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
+        type: 3}
+      propertyPath: LightSoundOn
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f4b87852dd00604eb6f69f6a7792f04, type: 3}
+    - target: {fileID: 1466461451403776942, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
+        type: 3}
+      propertyPath: LightSoundOff
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b8b9a33df70cb54ab2fb00ae806c94f, type: 3}
     - target: {fileID: 4217994246485684238, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
         type: 3}
       propertyPath: m_Name
@@ -22132,6 +22142,11 @@ PrefabInstance:
       propertyPath: KeyImage
       value: 
       objectReference: {fileID: 1970488592}
+    - target: {fileID: 8390145797956982702, guid: 5eb59d11c0ee7914cb0689ead0ed6fcd,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54bc8adbad860d54785243ca08663cb5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24279,7 +24294,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26876,7 +26891,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
